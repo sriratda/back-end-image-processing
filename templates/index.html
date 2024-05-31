@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<h1>Template</h1>
+{% endblock %}
+
+{% block form %}
+<form action="/" method="POST" enctype="multipart/form-data">
+    <label for="image">Upload your image:</label>
+    <input type="file" id="image" name="image" accept="image/*" required>
+    <button type="submit">Process Image</button>
+</form>
+{% endblock %}
+{% block result %}
+<img class="center-img" src="{{ url_for('get_image3') }}" alt="Generated Image">
+{% endblock %}
+{% block result1 %}
+<img src="{{ url_for('get_image1') }}" alt="Generated Image">
+{% endblock %}
+{% block result2 %}
+<img src="{{ url_for('get_image2') }}" alt="Generated Image">
+{% endblock %}
