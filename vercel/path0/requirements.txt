@@ -17,14 +17,6 @@ async-lru==2.0.4
 async-timeout==4.0.3
 attrs==23.1.0
 auth0-python==4.7.0
-azure-cognitiveservices-speech==1.31.0
-azure-cognitiveservices-vision-face==0.6.0
-azure-common==1.1.28
-azure-core==1.29.0
-azure-keyvault-secrets==4.7.0
-azure-mgmt-compute==30.1.0
-azure-mgmt-core==1.4.0
-azure-storage-blob==12.17.0
 Babel==2.12.1
 backcall==0.2.0
 beautifulsoup4==4.11.1
