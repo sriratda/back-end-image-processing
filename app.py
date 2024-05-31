@@ -9,7 +9,7 @@ import requests
 from io import BytesIO
 import base64
 
-os.environ['REPLICATE_API_TOKEN'] = 'r8_7lqBo2by3lPFO3W2ytMPGT3EVWaxhAh0976ZN'
+os.environ['REPLICATE_API_TOKEN'] = 'r8_X2gjDZWF6YNkHfYmoAmLOjIy5E2e98w3gnt9W'
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
@@ -136,7 +136,13 @@ def model(inputImage, sizeImage):
     output_collage_path = 'img\output_collage.jpg'
 
     # Specify the target size in pixels for the resized images
-    target_size = (421, 421)  # Adjust as needed
+
+    if sizeImage == 1.0:
+        target_size = (421, 421)  # Adjust as needed
+    else:
+        target_size = (471, 471)
+
+    
 
     # Resize and arrange the images in a 2x3 grid on a 4x6 inch white background
     resize_and_arrange_images(input_picture_paths, output_collage_path, target_size)
